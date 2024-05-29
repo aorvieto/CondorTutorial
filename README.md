@@ -9,9 +9,9 @@ Thanks to _Niccolo Ajroldi_ and _Alexandru Meterez_ that showed me some of these
     2) Open up a terminal,
 
 2) Set up github on cluster (to download this repo). Run these instructions in parallel:
-    1) `git config --global user.name "Student Name"`
-    2) `git config --global user.email "your_email@mail.com"`
-    3) `ssh-keygen -t ed25519 -C "your_email@mail.com"`
+    1) `git config --global user.name "Your_Github_Name"`
+    2) `git config --global user.email "your_github_email@mail.com"`
+    3) `ssh-keygen -t ed25519 -C "your_github_email@mail.com"`
     4) `eval "$(ssh-agent -s)"`
     5) `ssh-add ~/.ssh/id_ed25519`
     6) `cat ~/.ssh/id_ed25519.pub`
