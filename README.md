@@ -58,4 +58,6 @@ Smarter yet non tutorial-like repos: [https://github.com/JonasGeiping/kraken](ht
 
 1) If you want to do some heavy stuff like downloading datasets, make sure you do this within an interactive job : run `condor_submit_bid 25 -i -append request_cpus=8 -append request_memory=10000` to connect to some CPUs not to slow down things. For some packages like the Mamba one, you need to actually connect to a GPU before installing. For installing vanilla stuff, CPUs or even login nodes are enough. 
 
-2) To remove a job you don't like, just type `condor_rm job_id`, where the job id looks something like 15501540.0. To remove all your jobs (carefully) run `condor_rm your_mpi_username`
+2) To remove a job you don't like, just type `condor_rm job_id`, where the job id looks something like 15501540.0. To remove all your jobs (carefully) run `condor_rm your_mpi_username`.
+
+3) Always save your models to evaluate them at later stages or train more. Here, indeed, I forgot to do it.
