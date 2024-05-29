@@ -8,7 +8,7 @@ Thanks to _Niccolo Ajroldi_ and _Alexandru Meterez_ that showed me some of these
     1) Open VSCode and connect to the MPI cluster using the SSH blu little square in the bottom left of the window. It might ask you to install plugins. That's fine.
     2) Open up a terminal,
 
-2) Set up github on cluster (to download this repo). Run these instructions in parallel:
+2) Set up github on cluster (to download this repo). Run these instructions in sequence:
     1) `git config --global user.name "Your_Github_Name"`
     2) `git config --global user.email "your_github_email@mail.com"`
     3) `ssh-keygen -t ed25519 -C "your_github_email@mail.com"`
