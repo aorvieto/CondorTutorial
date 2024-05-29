@@ -27,7 +27,7 @@ Thanks to _Niccolo Ajroldi_ and _Alexandru Meterez_ that showed me some of these
 4) Log out and back into condor. 
     1) Open a terminal
     2) git clone this repo
-    3) Now open the folder using the `Open' command in VScode. You should see this folder there.
+    3) Now open the folder using the `Open` command in VScode. You should see this folder there.
 
 5) Create a nice environment
     1) `conda create -n test python=3.12` or your preferred python version.
@@ -50,8 +50,10 @@ Thanks to _Niccolo Ajroldi_ and _Alexandru Meterez_ that showed me some of these
 
 4) Check the `runs` folder, here are all your runs, named by uid. There are logs, errors, and stuff. Under `results` is also the CSV format. Be careful, I did not log everything in there. To improve.
 
+5) Check your wandb or the stdout: you should get something >85% on cifar. If should take 2 minutes to run.
+
 ## Important stuff
 
 1) If you want to do some heavy stuff like downloading datasets, make sure you do this within an interactive job : run `condor_submit_bid 25 -i -append request_cpus=8 -append request_memory=10000` to connect to some CPUs not to slow down things. For some packages like the Mamba one, you need to actually connect to a GPU before installing. For installing vanilla stuff, CPUs or even login node (i.e. skipping stis step) is enough. 
 
-2) To remove a job you dont like, just type `condor_rm job_id`, where the job id looks something like 15501540.0. To remove all your jobs (careful) run `condor_rm mpi_username'
+2) To remove a job you dont like, just type `condor_rm job_id`, where the job id looks something like 15501540.0. To remove all your jobs (careful) run `condor_rm mpi_username`
