@@ -20,25 +20,26 @@ Smarter yet non tutorial-like repos: [https://github.com/JonasGeiping/kraken](ht
     7) Go to [https://github.com/settings/keys](https://github.com/settings/keys) and enter the string you got as output, save the SSH key with any name.
 
 3) Now let's install Python, specifically Miniconda. Run these in sequence.
-    1) `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`
-    2) `chmod +x Miniconda3-latest-Linux-x86_64.sh`
-    3) `./Miniconda3-latest-Linux-x86_64.sh`
-    4) `export PATH="$HOME/miniconda3/bin:$PATH"`
+4) wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+    1) `wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh`
+    2) `chmod +x Miniforge3-Linux-x86_64.sh`
+    3) `./Miniforge3-Linux-x86_64.sh`
+    4) `export PATH="$HOME/miniforge3/bin:$PATH"`
     5) `conda init bash`
 
-4) Log out and back into condor. 
+5) Log out and back into condor. 
     1) Open a terminal
     2) git clone this repo
     3) Now open the folder using the `Open` command in VScode. You should see this folder there.
 
-5) Create a nice environment
+6) Create a nice environment
     1) `conda create -n test python=3.12` or your preferred python version.
     2) `conda activate test`
     3) Optional: Select in VSCode a Python Interpreter within the command palette -- specifically, this environment. So that you have no warnings.
     4) Install packages needed for this tutorial: `pip install torch torchvision einops pandas argparse itertools wandb`
     5) Optional: Create a (or log into your) Weights & Biases account, then go to [https://wandb.ai/settings](https://wandb.ai/settings) and create an API key. Then do `wandb login` from the condor terminal in your environment and paste it there.
 
-6) Folders and permissions:
+7) Folders and permissions:
     1) create folders `results` and `runs` inside the repositoty folder
     2) give permission to the executable with `chmod +x run.sh`
 
